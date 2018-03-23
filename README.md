@@ -15,8 +15,8 @@ You can of course contact us to obtain it directly.
 
 The notebooks use [`pandas`](https://pandas.pydata.org/) for data analysis.
 We used v0.20.3 but anything above and some below should do as well.
-For plotting, `matplotlib 2.0` was and `seaborn 0.8` were used.
-Finally you of course need `jupyter` in version `1.0.0` or above.
+For plotting, `matplotlib 2.0` and `seaborn 0.8` were used.
+Finally, you need `jupyter` in version `1.0.0` or above.
 
 ### Optional
 
