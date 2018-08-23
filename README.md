@@ -22,3 +22,19 @@ Finally, you need `jupyter` in version `1.0.0` or above.
 
 The graph generation script makes use of [Networkit](https://github.com/kit-parco/networkit).
 To be able to write our binary graphs you will need at least version 4.6.
+
+## Generating massive LFR graphs for weak scaling
+
+Our massive weak scaling graphs were generate using a [external memory LFR generator](https://github.com/michitux/extmem-lfr/tree/dist_cluster).
+If you obtained it you can recreate our graphs like so:
+
+```bash
+for x in 5 6 7 8 9
+do
+  n=$[10**x]
+  echo $n
+  ./pa_lfr -b 100Gi -s 1165388768 -n $n -c $[n/50] -i 50 -a 10000 -x 50 -y 12000 -z -1 -m 0.4 -o <graph_output_path>/graph_50_10000_mu_0.4_${n}-sorted.bin  -p <griund_truth_output_path>/LFR/part_50_10000_mu_0.4_${n}-sorted.bin 2>&1 > <log_path>/graph_50_10000_mu_0.4_${n}-sorted-seq.log
+done
+```
+
+Smaller graphs can also be generated with networkit.
