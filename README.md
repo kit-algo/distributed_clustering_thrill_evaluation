@@ -21,4 +21,4 @@ Finally, you need `jupyter` in version `1.0.0` or above.
 ### Optional
 
 The graph generation script makes use of [Networkit](https://github.com/kit-parco/networkit).
-To be able to write our binary graphs you will need to use the thrill_support branch of this [fork](https://github.com/michitux/networkit/tree/thrill_support) of networkit.
+To be able to write our binary graphs you will need at least version 4.6.
